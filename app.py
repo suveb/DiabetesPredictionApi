@@ -22,4 +22,4 @@ def predict():
     result = model.predict(t)
     return jsonify({ 'result': result[0]})
     
-app.run(debug=True)
+app.run(debug=True,port=5001)
