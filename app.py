@@ -21,6 +21,11 @@ def predict():
     t = np.reshape(p,(1,-1))
     result = model.predict(t)
     return jsonify({ 'result': result[0]})
+                        
+@app.route('/getter')
+def predicter():
+    return jsonify({ 'result': 'sachin'})                        
+               
 
 if __name__ == '__main__':    
     app.run(debug=True,port=5000)
